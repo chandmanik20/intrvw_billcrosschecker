@@ -24,7 +24,8 @@ public class BillValidator implements Validator{
 			totalBillAmount += billamount;
 		}
 		
-		MatchModel matchModel = new MatchModel((branch.getTotalCollection() == totalBillAmount), branch.getLocation(), branch.getTotalCollection(), totalBillAmount, branch.getLocationid());
+		int comp = Float.compare(branch.getTotalCollection(), totalBillAmount);
+		MatchModel matchModel = new MatchModel(comp ==0, branch.getLocation(), branch.getTotalCollection(), totalBillAmount, branch.getLocationid());
 		return matchModel;
 	}
 }
