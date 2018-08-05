@@ -1,0 +1,21 @@
+<cmfoodchain>
+	<branch>
+		<location>Delhi</location>
+		<totalcollection>720.00</totalcollection>
+		<locationid>DEL-1234-456</locationid>
+	</branch>
+	<orders>
+		<orderdetail>
+			<orderid>1</orderid>
+			<billamount>62.00</billamount>
+		</orderdetail>
+		<orderdetail>
+			<orderid>2</orderid>
+			<billamount>70.00</billamount>
+		</orderdetail>
+		<orderdetail>
+			<orderid>3</orderid>
+			<billamount>588.00</billamount>
+		</orderdetail>
+	</orders>
+</cmfoodchain>
