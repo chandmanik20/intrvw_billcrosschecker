@@ -11,8 +11,8 @@ import org.junit.Test;
 
 import com.models.CmfoodchainType;
 import com.models.MatchModel;
-import com.models.branchType;
-import com.models.orderdetailType;
+import com.models.Branch;
+import com.models.Orderdetail;
 import com.validator.BillValidator;
 
 import junit.framework.Assert;
@@ -31,18 +31,18 @@ public class ProcessorTest {
 
 	@Test
 	public void testProcess() {
-		branchType branch = new branchType("Mumbai", 124.90f, "BOM-1234-456");
-		orderdetailType order1 = new orderdetailType(1L, 60.43f);
-		orderdetailType order2 = new orderdetailType(2L, 72.43f);
-		List<orderdetailType> orders = new ArrayList<orderdetailType>();
+		Branch branch = new Branch("Mumbai", 124.90f, "BOM-1234-456");
+		Orderdetail order1 = new Orderdetail(1L, 60.43f);
+		Orderdetail order2 = new Orderdetail(2L, 72.43f);
+		List<Orderdetail> orders = new ArrayList<Orderdetail>();
 		orders.add(order1);
 		orders.add(order2);		
 		CmfoodchainType cmfoodchainType = new CmfoodchainType(branch, orders);
 		
-		branchType branch11 = new branchType("Delhi", 35.35f, "DEL-1234-456");
-		orderdetailType order11 = new orderdetailType(1L, 20.20f);
-		orderdetailType order12 = new orderdetailType(2L, 15.15f);
-		List<orderdetailType> orders12 = new ArrayList<orderdetailType>();
+		Branch branch11 = new Branch("Delhi", 35.35f, "DEL-1234-456");
+		Orderdetail order11 = new Orderdetail(1L, 20.20f);
+		Orderdetail order12 = new Orderdetail(2L, 15.15f);
+		List<Orderdetail> orders12 = new ArrayList<Orderdetail>();
 		orders12.add(order11);
 		orders12.add(order12);		
 		CmfoodchainType cmfoodchainType12 = new CmfoodchainType(branch11, orders12);
@@ -63,18 +63,18 @@ public class ProcessorTest {
 
 	@Test
 	public void testGetMatchModels() {
-		branchType branch = new branchType("Mumbai", 124.90f, "BOM-1234-456");
-		orderdetailType order1 = new orderdetailType(1L, 60.43f);
-		orderdetailType order2 = new orderdetailType(2L, 72.43f);
-		List<orderdetailType> orders = new ArrayList<orderdetailType>();
+		Branch branch = new Branch("Mumbai", 124.90f, "BOM-1234-456");
+		Orderdetail order1 = new Orderdetail(1L, 60.43f);
+		Orderdetail order2 = new Orderdetail(2L, 72.43f);
+		List<Orderdetail> orders = new ArrayList<Orderdetail>();
 		orders.add(order1);
 		orders.add(order2);		
 		CmfoodchainType cmfoodchainType = new CmfoodchainType(branch, orders);
 		
-		branchType branch11 = new branchType("Delhi", 35.35f, "DEL-1234-456");
-		orderdetailType order11 = new orderdetailType(1L, 20.20f);
-		orderdetailType order12 = new orderdetailType(2L, 15.15f);
-		List<orderdetailType> orders12 = new ArrayList<orderdetailType>();
+		Branch branch11 = new Branch("Delhi", 35.35f, "DEL-1234-456");
+		Orderdetail order11 = new Orderdetail(1L, 20.20f);
+		Orderdetail order12 = new Orderdetail(2L, 15.15f);
+		List<Orderdetail> orders12 = new ArrayList<Orderdetail>();
 		orders12.add(order11);
 		orders12.add(order12);		
 		CmfoodchainType cmfoodchainType12 = new CmfoodchainType(branch11, orders12);
@@ -94,18 +94,18 @@ public class ProcessorTest {
 
 	@Test
 	public void testGetMismatchModels() {
-		branchType branch = new branchType("Mumbai", 124.90f, "BOM-1234-456");
-		orderdetailType order1 = new orderdetailType(1L, 60.43f);
-		orderdetailType order2 = new orderdetailType(2L, 72.43f);
-		List<orderdetailType> orders = new ArrayList<orderdetailType>();
+		Branch branch = new Branch("Mumbai", 124.90f, "BOM-1234-456");
+		Orderdetail order1 = new Orderdetail(1L, 60.43f);
+		Orderdetail order2 = new Orderdetail(2L, 72.43f);
+		List<Orderdetail> orders = new ArrayList<Orderdetail>();
 		orders.add(order1);
 		orders.add(order2);		
 		CmfoodchainType cmfoodchainType = new CmfoodchainType(branch, orders);
 		
-		branchType branch11 = new branchType("Delhi", 35.35f, "DEL-1234-456");
-		orderdetailType order11 = new orderdetailType(1L, 20.20f);
-		orderdetailType order12 = new orderdetailType(2L, 15.15f);
-		List<orderdetailType> orders12 = new ArrayList<orderdetailType>();
+		Branch branch11 = new Branch("Delhi", 35.35f, "DEL-1234-456");
+		Orderdetail order11 = new Orderdetail(1L, 20.20f);
+		Orderdetail order12 = new Orderdetail(2L, 15.15f);
+		List<Orderdetail> orders12 = new ArrayList<Orderdetail>();
 		orders12.add(order11);
 		orders12.add(order12);		
 		CmfoodchainType cmfoodchainType12 = new CmfoodchainType(branch11, orders12);

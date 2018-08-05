@@ -4,8 +4,8 @@ import java.util.List;
 
 import com.models.CmfoodchainType;
 import com.models.MatchModel;
-import com.models.branchType;
-import com.models.orderdetailType;
+import com.models.Branch;
+import com.models.Orderdetail;
 
 public class BillValidator implements Validator{
 	
@@ -14,8 +14,8 @@ public class BillValidator implements Validator{
 	 * if found mismatch it will add object to mismatch list.
 	 */
 	public MatchModel match(CmfoodchainType cmfoodchainType) {
-		branchType branch = cmfoodchainType.getBranch();
-		List<orderdetailType> orders = cmfoodchainType.getOrders();
+		Branch branch = cmfoodchainType.getBranch();
+		List<Orderdetail> orders = cmfoodchainType.getOrders();
 		
 		int count = orders == null ? 0 : orders.size();
 		float totalBillAmount = 0;

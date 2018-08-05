@@ -12,8 +12,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import com.models.CmfoodchainType;
-import com.models.branchType;
-import com.models.orderdetailType;
+import com.models.Branch;
+import com.models.Orderdetail;
 
 class XMLFileReader implements FileReader {
 
@@ -42,18 +42,18 @@ class XMLFileReader implements FileReader {
 			
 			System.out.println("Location:" + location + "; totalCollection:"+totalCollection+"; locationid:"+locationid);
 			
-			branchType branchType1 = new branchType(location, Float.parseFloat(totalCollection), locationid);
+			Branch branchType1 = new Branch(location, Float.parseFloat(totalCollection), locationid);
 		
 			System.out.println("--------------orders--------------");
 			NodeList ordersNodeList = doc.getElementsByTagName("orderdetail");
 			
-			List<orderdetailType> orderDetails = new ArrayList<orderdetailType>(); 
+			List<Orderdetail> orderDetails = new ArrayList<Orderdetail>(); 
 			for (int temp = 0; temp < ordersNodeList.getLength(); temp++) {
 				String orderid =((Element)ordersNodeList.item(temp)).getElementsByTagName("orderid").item(0).getTextContent();
 				String billamount =((Element)ordersNodeList.item(temp)).getElementsByTagName("billamount").item(0).getTextContent();
 				System.out.println("orderid : " + orderid);
 				System.out.println("billamount : " + billamount);
-				orderdetailType orderdetailType1 = new orderdetailType(Long.parseLong(orderid), Float.parseFloat(billamount));
+				Orderdetail orderdetailType1 = new Orderdetail(Long.parseLong(orderid), Float.parseFloat(billamount));
 				
 				orderDetails.add(orderdetailType1);
 			}

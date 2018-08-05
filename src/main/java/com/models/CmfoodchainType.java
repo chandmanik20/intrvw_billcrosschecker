@@ -3,20 +3,20 @@ package com.models;
 import java.util.List;
 
 public class CmfoodchainType {
-	private branchType branch;
-	private List<orderdetailType> orders;
+	private Branch branch;
+	private List<Orderdetail> orders;
 	
-	public CmfoodchainType(branchType branch, List<orderdetailType> orders) {
+	public CmfoodchainType(Branch branch, List<Orderdetail> orders) {
 		super();
 		this.branch = branch;
 		this.orders = orders;
 	}
 
-	public branchType getBranch() {
+	public Branch getBranch() {
 		return branch;
 	}
 
-	public List<orderdetailType> getOrders() {
+	public List<Orderdetail> getOrders() {
 		return orders;
 	}
 	

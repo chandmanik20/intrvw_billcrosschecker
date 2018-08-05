@@ -12,8 +12,8 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import com.models.CmfoodchainType;
-import com.models.branchType;
-import com.models.orderdetailType;
+import com.models.Branch;
+import com.models.Orderdetail;
 
 class JSONFileReader implements FileReader {
 
@@ -34,18 +34,18 @@ class JSONFileReader implements FileReader {
 	            String locationid = (String) branchObj.get("locationid");
 	            
 	            System.out.println("location:"+ location+"; totalcollection:"+totalcollection+"; locationid:"+locationid);
-	            branchType branchType1 = new branchType(location, Float.parseFloat(totalcollection), locationid);
+	            Branch branchType1 = new Branch(location, Float.parseFloat(totalcollection), locationid);
 	            
 	            //TODO order details
 	            JSONObject ordersObj = (JSONObject) cmfoodchainObj.get("orders");
 	            JSONArray orderDetailArray = (JSONArray) ordersObj.get("orderdetail");
-	            List<orderdetailType> orderDetails = new ArrayList<orderdetailType>(); 
+	            List<Orderdetail> orderDetails = new ArrayList<Orderdetail>(); 
 	            for(int i = 0; i < orderDetailArray.size(); i++){
 	                Long orderid = (Long)((JSONObject)orderDetailArray.get(i)).get("orderid");
 	                String billamount = (String)((JSONObject)orderDetailArray.get(i)).get("billamount");
 	                
 	                System.out.println("orderid : " + orderid+"; billamount:" + billamount);
-	                orderdetailType orderdetailType1 = new orderdetailType(orderid, Float.parseFloat(billamount));
+	                Orderdetail orderdetailType1 = new Orderdetail(orderid, Float.parseFloat(billamount));
 					
 					orderDetails.add(orderdetailType1);
 	            }

@@ -11,8 +11,8 @@ import org.junit.Test;
 
 import com.models.CmfoodchainType;
 import com.models.MatchModel;
-import com.models.branchType;
-import com.models.orderdetailType;
+import com.models.Branch;
+import com.models.Orderdetail;
 import com.validator.BillValidator;
 
 import junit.framework.Assert;
@@ -32,10 +32,10 @@ public class BillValidatorTest {
 
 	@Test
 	public void testMatchTrue() {
-		branchType branch = new branchType("Mumbai", 124.90f, "BOM-1234-456");
-		orderdetailType order1 = new orderdetailType(1L, 60.43f);
-		orderdetailType order2 = new orderdetailType(2L, 72.43f);
-		List<orderdetailType> orders = new ArrayList<orderdetailType>();
+		Branch branch = new Branch("Mumbai", 124.90f, "BOM-1234-456");
+		Orderdetail order1 = new Orderdetail(1L, 60.43f);
+		Orderdetail order2 = new Orderdetail(2L, 72.43f);
+		List<Orderdetail> orders = new ArrayList<Orderdetail>();
 		orders.add(order1);
 		orders.add(order2);
 		
@@ -46,10 +46,10 @@ public class BillValidatorTest {
 	
 	@Test
 	public void testMatchFalse() {
-		branchType branch = new branchType("Mumbai", 124.90f, "BOM-1234-456");
-		orderdetailType order1 = new orderdetailType(1L, 60.90f);
-		orderdetailType order2 = new orderdetailType(2L, 64.00f);
-		List<orderdetailType> orders = new ArrayList<orderdetailType>();
+		Branch branch = new Branch("Mumbai", 124.90f, "BOM-1234-456");
+		Orderdetail order1 = new Orderdetail(1L, 60.90f);
+		Orderdetail order2 = new Orderdetail(2L, 64.00f);
+		List<Orderdetail> orders = new ArrayList<Orderdetail>();
 		orders.add(order1);
 		orders.add(order2);
 		
