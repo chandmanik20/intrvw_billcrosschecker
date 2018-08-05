@@ -17,7 +17,11 @@ Section 3 :
   
   b)Final Output snapshot
   
+  https://github.com/chandmanik20/intrvw_billcrosschecker/blob/master/output_mismatch.jpg
+  
   c)JUnit Coverage Snapshot
+  
+  https://github.com/chandmanik20/intrvw_billcrosschecker/blob/master/bill_process_code_coverage.jpg
   
 Section 4 :
   a) THE CODE DOES NOT HAVE ANY COPYRIGHT WHATSOEVER.
