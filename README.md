@@ -17,7 +17,7 @@ Section 3 :
   
   b)Final Output snapshot
   
-  c)Junit Coverage Snapshot
+  c)JUnit Coverage Snapshot
   
 Section 4 :
   a) THE CODE DOES NOT HAVE ANY COPYRIGHT WHATSOEVER.
